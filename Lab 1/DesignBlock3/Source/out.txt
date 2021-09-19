@@ -1,0 +1,11 @@
+VCD info: dumpfile output.vcd opened for output.
+ << Starting simulation >>
+                   0 SW=00000000, KEY=xx, HEX0=xxxxxxxx, HEX1=xxxxxxxx, HEX2=xxxxxxxx, HEX3=xxxxxxxx, HEX4=xxxxxxxx, HEX5=xxxxxxxx
+                  50 SW=00100001, KEY=xx, HEX0=xxxxxxxx, HEX1=xxxxxxxx, HEX2=xxxxxxxx, HEX3=xxxxxxxx, HEX4=xxxxxxxx, HEX5=xxxxxxxx
+                 100 SW=00110110, KEY=xx, HEX0=xxxxxxxx, HEX1=xxxxxxxx, HEX2=xxxxxxxx, HEX3=xxxxxxxx, HEX4=xxxxxxxx, HEX5=xxxxxxxx
+                 150 SW=10001000, KEY=xx, HEX0=xxxxxxxx, HEX1=xxxxxxxx, HEX2=xxxxxxxx, HEX3=xxxxxxxx, HEX4=xxxxxxxx, HEX5=xxxxxxxx
+                 200 SW=11111001, KEY=xx, HEX0=xxxxxxxx, HEX1=xxxxxxxx, HEX2=xxxxxxxx, HEX3=xxxxxxxx, HEX4=xxxxxxxx, HEX5=xxxxxxxx
+                 250 SW=10001101, KEY=xx, HEX0=xxxxxxxx, HEX1=xxxxxxxx, HEX2=xxxxxxxx, HEX3=xxxxxxxx, HEX4=xxxxxxxx, HEX5=xxxxxxxx
+                 300 SW=01001011, KEY=xx, HEX0=xxxxxxxx, HEX1=xxxxxxxx, HEX2=xxxxxxxx, HEX3=xxxxxxxx, HEX4=xxxxxxxx, HEX5=xxxxxxxx
+                 350 SW=11100001, KEY=xx, HEX0=xxxxxxxx, HEX1=xxxxxxxx, HEX2=xxxxxxxx, HEX3=xxxxxxxx, HEX4=xxxxxxxx, HEX5=xxxxxxxx
+                 410<< Sim Complete. If no error messages, test successful. >>

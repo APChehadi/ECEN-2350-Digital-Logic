@@ -1,0 +1,6 @@
+VCD info: dumpfile output.vcd opened for output.
+ << Starting simulation >>
+                   0 SW=00000000, KEY=xx, HEX0=xxxxxxxx, HEX1=xxxxxxxx, HEX2=xxxxxxxx, HEX3=xxxxxxxx, HEX4=xxxxxxxx, HEX5=xxxxxxxx, LEDR=zzzzzzzz
+                  20 SW=00000000, KEY=x0, HEX0=xxxxxxxx, HEX1=xxxxxxxx, HEX2=xxxxxxxx, HEX3=xxxxxxxx, HEX4=xxxxxxxx, HEX5=xxxxxxxx, LEDR=zzzzzzzz
+                 100 SW=00000000, KEY=00, HEX0=xxxxxxxx, HEX1=xxxxxxxx, HEX2=xxxxxxxx, HEX3=xxxxxxxx, HEX4=xxxxxxxx, HEX5=xxxxxxxx, LEDR=zzzzzzzz
+                 170<< Sim Complete. If not error messages, test successful. >>

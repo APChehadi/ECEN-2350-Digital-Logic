@@ -1,0 +1,210 @@
+$date
+	Mon Oct 07 11:43:33 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module Lab1DB2 $end
+$var wire 1 ! ADC_CLK_10 $end
+$var wire 2 " KEY [1:0] $end
+$var wire 1 # MAX10_CLK1_50 $end
+$var wire 1 $ MAX10_CLK2_50 $end
+$var wire 8 % SW [7:0] $end
+$var wire 10 & LEDR [9:0] $end
+$var wire 8 ' HEX5 [7:0] $end
+$var wire 8 ( HEX4 [7:0] $end
+$var wire 8 ) HEX3 [7:0] $end
+$var wire 8 * HEX2 [7:0] $end
+$var wire 8 + HEX1 [7:0] $end
+$var wire 8 , HEX0 [7:0] $end
+$scope module U1 $end
+$var wire 2 - KEY [1:0] $end
+$var wire 4 . input1 [3:0] $end
+$var wire 4 / input2 [3:0] $end
+$var wire 4 0 y [3:0] $end
+$var wire 4 1 x [3:0] $end
+$var wire 4 2 s [3:0] $end
+$var wire 5 3 c [4:0] $end
+$var wire 8 4 HEX5 [7:0] $end
+$var wire 8 5 HEX4 [7:0] $end
+$var wire 8 6 HEX3 [7:0] $end
+$var wire 8 7 HEX2 [7:0] $end
+$var wire 8 8 HEX1 [7:0] $end
+$var wire 8 9 HEX0 [7:0] $end
+$var reg 8 : input1_d [7:0] $end
+$var reg 8 ; input2_d [7:0] $end
+$var reg 8 < s_disp [7:0] $end
+$var reg 8 = sign1_d [7:0] $end
+$var reg 8 > sign2_d [7:0] $end
+$var reg 8 ? sign_s [7:0] $end
+$scope module A0 $end
+$var wire 1 @ a_s $end
+$var wire 1 A c_in $end
+$var wire 1 B s_out $end
+$var wire 1 C x_in $end
+$var wire 1 D y_in $end
+$var wire 1 E c_out $end
+$upscope $end
+$scope module A1 $end
+$var wire 1 F a_s $end
+$var wire 1 G c_in $end
+$var wire 1 H s_out $end
+$var wire 1 I x_in $end
+$var wire 1 J y_in $end
+$var wire 1 K c_out $end
+$upscope $end
+$scope module A2 $end
+$var wire 1 L a_s $end
+$var wire 1 M c_in $end
+$var wire 1 N s_out $end
+$var wire 1 O x_in $end
+$var wire 1 P y_in $end
+$var wire 1 Q c_out $end
+$upscope $end
+$scope module A3 $end
+$var wire 1 R a_s $end
+$var wire 1 S c_in $end
+$var wire 1 T s_out $end
+$var wire 1 U x_in $end
+$var wire 1 V y_in $end
+$var wire 1 W c_out $end
+$upscope $end
+$scope module U1 $end
+$var wire 8 X HEX [7:0] $end
+$var wire 8 Y NUM [7:0] $end
+$var reg 8 Z value [7:0] $end
+$upscope $end
+$scope module U2 $end
+$var wire 8 [ HEX [7:0] $end
+$var wire 8 \ NUM [7:0] $end
+$var reg 8 ] value [7:0] $end
+$upscope $end
+$scope module U3 $end
+$var wire 8 ^ HEX [7:0] $end
+$var wire 8 _ NUM [7:0] $end
+$var reg 8 ` value [7:0] $end
+$upscope $end
+$scope module U4 $end
+$var wire 8 a HEX [7:0] $end
+$var wire 8 b NUM [7:0] $end
+$var reg 8 c value [7:0] $end
+$upscope $end
+$scope module U5 $end
+$var wire 8 d HEX [7:0] $end
+$var wire 8 e NUM [7:0] $end
+$var reg 8 f value [7:0] $end
+$upscope $end
+$scope module U6 $end
+$var wire 8 g HEX [7:0] $end
+$var wire 8 h NUM [7:0] $end
+$var reg 8 i value [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module TB_Lab1_DB2 $end
+$var reg 8 j HEX0 [7:0] $end
+$var reg 8 k HEX1 [7:0] $end
+$var reg 8 l HEX2 [7:0] $end
+$var reg 8 m HEX3 [7:0] $end
+$var reg 8 n HEX4 [7:0] $end
+$var reg 8 o HEX5 [7:0] $end
+$var reg 2 p KEY [1:0] $end
+$var reg 8 q SW [7:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b110100 q
+bx p
+bx o
+bx n
+bx m
+bx l
+bx k
+bx j
+bx i
+bx h
+bx g
+bx f
+bx e
+bx d
+bx c
+bx b
+bx a
+bx `
+bx _
+bx ^
+bx ]
+bx \
+bx [
+bx Z
+bx Y
+bx X
+xW
+zV
+zU
+xT
+xS
+zR
+xQ
+zP
+zO
+xN
+xM
+zL
+xK
+zJ
+zI
+xH
+xG
+zF
+xE
+zD
+zC
+xB
+zA
+z@
+bx ?
+bx >
+bx =
+bx <
+bx ;
+bx :
+bx 9
+bx 8
+bx 7
+bx 6
+bx 5
+bx 4
+bxz 3
+bx 2
+bz 1
+bz 0
+bz /
+bz .
+bz -
+bx ,
+bx +
+bx *
+bx )
+bx (
+bx '
+bz00000000 &
+bz %
+z$
+z#
+bz "
+z!
+$end
+#700
+bx1 p
+#900
+b1010010 q
+#1800
+b11010001 q
+#2700
+b1110101 q
+#3700

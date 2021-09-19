@@ -1,0 +1,249 @@
+|Lab1
+ADC_CLK_10 => ~NO_FANOUT~
+MAX10_CLK1_50 => ~NO_FANOUT~
+MAX10_CLK2_50 => ~NO_FANOUT~
+HEX0[0] <= Birthday:U1.HEX0
+HEX0[1] <= Birthday:U1.HEX0
+HEX0[2] <= Birthday:U1.HEX0
+HEX0[3] <= Birthday:U1.HEX0
+HEX0[4] <= Birthday:U1.HEX0
+HEX0[5] <= Birthday:U1.HEX0
+HEX0[6] <= Birthday:U1.HEX0
+HEX0[7] <= Birthday:U1.HEX0
+HEX1[0] <= Birthday:U1.HEX1
+HEX1[1] <= Birthday:U1.HEX1
+HEX1[2] <= Birthday:U1.HEX1
+HEX1[3] <= Birthday:U1.HEX1
+HEX1[4] <= Birthday:U1.HEX1
+HEX1[5] <= Birthday:U1.HEX1
+HEX1[6] <= Birthday:U1.HEX1
+HEX1[7] <= Birthday:U1.HEX1
+HEX2[0] <= Birthday:U1.HEX2
+HEX2[1] <= Birthday:U1.HEX2
+HEX2[2] <= Birthday:U1.HEX2
+HEX2[3] <= Birthday:U1.HEX2
+HEX2[4] <= Birthday:U1.HEX2
+HEX2[5] <= Birthday:U1.HEX2
+HEX2[6] <= Birthday:U1.HEX2
+HEX2[7] <= Birthday:U1.HEX2
+HEX3[0] <= Birthday:U1.HEX3
+HEX3[1] <= Birthday:U1.HEX3
+HEX3[2] <= Birthday:U1.HEX3
+HEX3[3] <= Birthday:U1.HEX3
+HEX3[4] <= Birthday:U1.HEX3
+HEX3[5] <= Birthday:U1.HEX3
+HEX3[6] <= Birthday:U1.HEX3
+HEX3[7] <= Birthday:U1.HEX3
+HEX4[0] <= Birthday:U1.HEX4
+HEX4[1] <= Birthday:U1.HEX4
+HEX4[2] <= Birthday:U1.HEX4
+HEX4[3] <= Birthday:U1.HEX4
+HEX4[4] <= Birthday:U1.HEX4
+HEX4[5] <= Birthday:U1.HEX4
+HEX4[6] <= Birthday:U1.HEX4
+HEX4[7] <= Birthday:U1.HEX4
+HEX5[0] <= Birthday:U1.HEX5
+HEX5[1] <= Birthday:U1.HEX5
+HEX5[2] <= Birthday:U1.HEX5
+HEX5[3] <= Birthday:U1.HEX5
+HEX5[4] <= Birthday:U1.HEX5
+HEX5[5] <= Birthday:U1.HEX5
+HEX5[6] <= Birthday:U1.HEX5
+HEX5[7] <= Birthday:U1.HEX5
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
+LEDR[0] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[8] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[9] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+SW[0] => LEDR.IN0
+SW[1] => LEDR.IN0
+SW[2] => LEDR.IN0
+SW[3] => LEDR.IN0
+SW[4] => LEDR.IN0
+SW[5] => LEDR.IN0
+SW[6] => LEDR.IN0
+SW[7] => LEDR.IN0
+SW[8] => LEDR.IN0
+SW[9] => LEDR.IN0
+
+
+|Lab1|Birthday:U1
+HEX0[0] <= SevenSeg:U1.HEX
+HEX0[1] <= SevenSeg:U1.HEX
+HEX0[2] <= SevenSeg:U1.HEX
+HEX0[3] <= SevenSeg:U1.HEX
+HEX0[4] <= SevenSeg:U1.HEX
+HEX0[5] <= SevenSeg:U1.HEX
+HEX0[6] <= SevenSeg:U1.HEX
+HEX0[7] <= SevenSeg:U1.HEX
+HEX1[0] <= SevenSeg:U2.HEX
+HEX1[1] <= SevenSeg:U2.HEX
+HEX1[2] <= SevenSeg:U2.HEX
+HEX1[3] <= SevenSeg:U2.HEX
+HEX1[4] <= SevenSeg:U2.HEX
+HEX1[5] <= SevenSeg:U2.HEX
+HEX1[6] <= SevenSeg:U2.HEX
+HEX1[7] <= SevenSeg:U2.HEX
+HEX2[0] <= SevenSeg:U3.HEX
+HEX2[1] <= SevenSeg:U3.HEX
+HEX2[2] <= SevenSeg:U3.HEX
+HEX2[3] <= SevenSeg:U3.HEX
+HEX2[4] <= SevenSeg:U3.HEX
+HEX2[5] <= SevenSeg:U3.HEX
+HEX2[6] <= SevenSeg:U3.HEX
+HEX2[7] <= SevenSeg:U3.HEX
+HEX3[0] <= SevenSeg:U4.HEX
+HEX3[1] <= SevenSeg:U4.HEX
+HEX3[2] <= SevenSeg:U4.HEX
+HEX3[3] <= SevenSeg:U4.HEX
+HEX3[4] <= SevenSeg:U4.HEX
+HEX3[5] <= SevenSeg:U4.HEX
+HEX3[6] <= SevenSeg:U4.HEX
+HEX3[7] <= SevenSeg:U4.HEX
+HEX4[0] <= SevenSeg:U5.HEX
+HEX4[1] <= SevenSeg:U5.HEX
+HEX4[2] <= SevenSeg:U5.HEX
+HEX4[3] <= SevenSeg:U5.HEX
+HEX4[4] <= SevenSeg:U5.HEX
+HEX4[5] <= SevenSeg:U5.HEX
+HEX4[6] <= SevenSeg:U5.HEX
+HEX4[7] <= SevenSeg:U5.HEX
+HEX5[0] <= SevenSeg:U6.HEX
+HEX5[1] <= SevenSeg:U6.HEX
+HEX5[2] <= SevenSeg:U6.HEX
+HEX5[3] <= SevenSeg:U6.HEX
+HEX5[4] <= SevenSeg:U6.HEX
+HEX5[5] <= SevenSeg:U6.HEX
+HEX5[6] <= SevenSeg:U6.HEX
+HEX5[7] <= SevenSeg:U6.HEX
+KEY[0] => ~NO_FANOUT~
+KEY[1] => HEX2_d[3].IN1
+KEY[1] => HEX2_d[2].IN1
+KEY[1] => HEX2_d[1].IN1
+KEY[1] => HEX3_d[1].IN1
+KEY[1] => HEX4_d[3].IN1
+KEY[1] => HEX4_d[2].IN1
+KEY[1] => HEX4_d[0].IN1
+
+
+|Lab1|Birthday:U1|SevenSeg:U1
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
+
+
+|Lab1|Birthday:U1|SevenSeg:U2
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
+
+
+|Lab1|Birthday:U1|SevenSeg:U3
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
+
+
+|Lab1|Birthday:U1|SevenSeg:U4
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
+
+
+|Lab1|Birthday:U1|SevenSeg:U5
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
+
+
+|Lab1|Birthday:U1|SevenSeg:U6
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
+
+

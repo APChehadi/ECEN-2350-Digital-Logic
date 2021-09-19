@@ -1,0 +1,297 @@
+|Lab1DB2
+ADC_CLK_10 => ~NO_FANOUT~
+MAX10_CLK1_50 => ~NO_FANOUT~
+MAX10_CLK2_50 => ~NO_FANOUT~
+HEX0[0] << RippleCarry:U1.HEX0
+HEX0[1] << RippleCarry:U1.HEX0
+HEX0[2] << RippleCarry:U1.HEX0
+HEX0[3] << RippleCarry:U1.HEX0
+HEX0[4] << RippleCarry:U1.HEX0
+HEX0[5] << RippleCarry:U1.HEX0
+HEX0[6] << RippleCarry:U1.HEX0
+HEX0[7] << RippleCarry:U1.HEX0
+HEX1[0] << RippleCarry:U1.HEX1
+HEX1[1] << RippleCarry:U1.HEX1
+HEX1[2] << RippleCarry:U1.HEX1
+HEX1[3] << RippleCarry:U1.HEX1
+HEX1[4] << RippleCarry:U1.HEX1
+HEX1[5] << RippleCarry:U1.HEX1
+HEX1[6] << RippleCarry:U1.HEX1
+HEX1[7] << RippleCarry:U1.HEX1
+HEX2[0] << RippleCarry:U1.HEX2
+HEX2[1] << RippleCarry:U1.HEX2
+HEX2[2] << RippleCarry:U1.HEX2
+HEX2[3] << RippleCarry:U1.HEX2
+HEX2[4] << RippleCarry:U1.HEX2
+HEX2[5] << RippleCarry:U1.HEX2
+HEX2[6] << RippleCarry:U1.HEX2
+HEX2[7] << RippleCarry:U1.HEX2
+HEX3[0] << RippleCarry:U1.HEX3
+HEX3[1] << RippleCarry:U1.HEX3
+HEX3[2] << RippleCarry:U1.HEX3
+HEX3[3] << RippleCarry:U1.HEX3
+HEX3[4] << RippleCarry:U1.HEX3
+HEX3[5] << RippleCarry:U1.HEX3
+HEX3[6] << RippleCarry:U1.HEX3
+HEX3[7] << RippleCarry:U1.HEX3
+HEX4[0] << RippleCarry:U1.HEX4
+HEX4[1] << RippleCarry:U1.HEX4
+HEX4[2] << RippleCarry:U1.HEX4
+HEX4[3] << RippleCarry:U1.HEX4
+HEX4[4] << RippleCarry:U1.HEX4
+HEX4[5] << RippleCarry:U1.HEX4
+HEX4[6] << RippleCarry:U1.HEX4
+HEX4[7] << RippleCarry:U1.HEX4
+HEX5[0] << RippleCarry:U1.HEX5
+HEX5[1] << RippleCarry:U1.HEX5
+HEX5[2] << RippleCarry:U1.HEX5
+HEX5[3] << RippleCarry:U1.HEX5
+HEX5[4] << RippleCarry:U1.HEX5
+HEX5[5] << RippleCarry:U1.HEX5
+HEX5[6] << RippleCarry:U1.HEX5
+HEX5[7] << RippleCarry:U1.HEX5
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
+LEDR[0] << <GND>
+LEDR[1] << <GND>
+LEDR[2] << <GND>
+LEDR[3] << <GND>
+LEDR[4] << <GND>
+LEDR[5] << <GND>
+LEDR[6] << <GND>
+LEDR[7] << <GND>
+LEDR[8] << <GND>
+LEDR[9] << <GND>
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+
+
+|Lab1DB2|RippleCarry:U1
+HEX0[0] <= SevenSeg:U5.HEX
+HEX0[1] <= SevenSeg:U5.HEX
+HEX0[2] <= SevenSeg:U5.HEX
+HEX0[3] <= SevenSeg:U5.HEX
+HEX0[4] <= SevenSeg:U5.HEX
+HEX0[5] <= SevenSeg:U5.HEX
+HEX0[6] <= SevenSeg:U5.HEX
+HEX0[7] <= SevenSeg:U5.HEX
+HEX1[0] <= SevenSeg:U6.HEX
+HEX1[1] <= SevenSeg:U6.HEX
+HEX1[2] <= SevenSeg:U6.HEX
+HEX1[3] <= SevenSeg:U6.HEX
+HEX1[4] <= SevenSeg:U6.HEX
+HEX1[5] <= SevenSeg:U6.HEX
+HEX1[6] <= SevenSeg:U6.HEX
+HEX1[7] <= SevenSeg:U6.HEX
+HEX2[0] <= SevenSeg:U3.HEX
+HEX2[1] <= SevenSeg:U3.HEX
+HEX2[2] <= SevenSeg:U3.HEX
+HEX2[3] <= SevenSeg:U3.HEX
+HEX2[4] <= SevenSeg:U3.HEX
+HEX2[5] <= SevenSeg:U3.HEX
+HEX2[6] <= SevenSeg:U3.HEX
+HEX2[7] <= SevenSeg:U3.HEX
+HEX3[0] <= SevenSeg:U4.HEX
+HEX3[1] <= SevenSeg:U4.HEX
+HEX3[2] <= SevenSeg:U4.HEX
+HEX3[3] <= SevenSeg:U4.HEX
+HEX3[4] <= SevenSeg:U4.HEX
+HEX3[5] <= SevenSeg:U4.HEX
+HEX3[6] <= SevenSeg:U4.HEX
+HEX3[7] <= SevenSeg:U4.HEX
+HEX4[0] <= SevenSeg:U1.HEX
+HEX4[1] <= SevenSeg:U1.HEX
+HEX4[2] <= SevenSeg:U1.HEX
+HEX4[3] <= SevenSeg:U1.HEX
+HEX4[4] <= SevenSeg:U1.HEX
+HEX4[5] <= SevenSeg:U1.HEX
+HEX4[6] <= SevenSeg:U1.HEX
+HEX4[7] <= SevenSeg:U1.HEX
+HEX5[0] <= SevenSeg:U2.HEX
+HEX5[1] <= SevenSeg:U2.HEX
+HEX5[2] <= SevenSeg:U2.HEX
+HEX5[3] <= SevenSeg:U2.HEX
+HEX5[4] <= SevenSeg:U2.HEX
+HEX5[5] <= SevenSeg:U2.HEX
+HEX5[6] <= SevenSeg:U2.HEX
+HEX5[7] <= SevenSeg:U2.HEX
+KEY[0] => c[0].IN5
+KEY[1] => ~NO_FANOUT~
+input1[0] => x[0].IN1
+input1[1] => x[1].IN1
+input1[2] => x[2].IN1
+input1[3] => x[3].IN1
+input2[0] => y[0].IN1
+input2[1] => y[1].IN1
+input2[2] => y[2].IN1
+input2[3] => y[3].IN1
+
+
+|Lab1DB2|RippleCarry:U1|SevenSeg:U1
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
+
+
+|Lab1DB2|RippleCarry:U1|SevenSeg:U2
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
+
+
+|Lab1DB2|RippleCarry:U1|SevenSeg:U3
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
+
+
+|Lab1DB2|RippleCarry:U1|SevenSeg:U4
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
+
+
+|Lab1DB2|RippleCarry:U1|Adder:A0
+s_out <= s_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+y_in => s_out.IN0
+x_in => s_out.IN1
+x_in => c_out.IN1
+x_in => Add0.IN2
+c_in[0] => s_out.IN1
+c_in[0] => c_out.IN1
+a_s[0] => s_out.IN1
+
+
+|Lab1DB2|RippleCarry:U1|Adder:A1
+s_out <= s_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+y_in => s_out.IN0
+x_in => s_out.IN1
+x_in => c_out.IN1
+x_in => Add0.IN2
+c_in[0] => s_out.IN1
+c_in[0] => c_out.IN1
+a_s[0] => s_out.IN1
+
+
+|Lab1DB2|RippleCarry:U1|Adder:A2
+s_out <= s_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+y_in => s_out.IN0
+x_in => s_out.IN1
+x_in => c_out.IN1
+x_in => Add0.IN2
+c_in[0] => s_out.IN1
+c_in[0] => c_out.IN1
+a_s[0] => s_out.IN1
+
+
+|Lab1DB2|RippleCarry:U1|Adder:A3
+s_out <= s_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+y_in => s_out.IN0
+x_in => s_out.IN1
+x_in => c_out.IN1
+x_in => Add0.IN2
+c_in[0] => s_out.IN1
+c_in[0] => c_out.IN1
+a_s[0] => s_out.IN1
+
+
+|Lab1DB2|RippleCarry:U1|SevenSeg:U5
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
+
+
+|Lab1DB2|RippleCarry:U1|SevenSeg:U6
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
+
+

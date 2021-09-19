@@ -1,0 +1,140 @@
+$date
+	Mon Oct 07 00:55:56 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module Lab1 $end
+$var wire 1 ! ADC_CLK_10 $end
+$var wire 2 " KEY [1:0] $end
+$var wire 1 # MAX10_CLK1_50 $end
+$var wire 1 $ MAX10_CLK2_50 $end
+$var wire 10 % SW [9:0] $end
+$var wire 10 & LEDR [9:0] $end
+$var wire 8 ' HEX5 [7:0] $end
+$var wire 8 ( HEX4 [7:0] $end
+$var wire 8 ) HEX3 [7:0] $end
+$var wire 8 * HEX2 [7:0] $end
+$var wire 8 + HEX1 [7:0] $end
+$var wire 8 , HEX0 [7:0] $end
+$scope module U1 $end
+$var wire 2 - KEY [1:0] $end
+$var wire 8 . HEX5 [7:0] $end
+$var wire 8 / HEX4 [7:0] $end
+$var wire 8 0 HEX3 [7:0] $end
+$var wire 8 1 HEX2 [7:0] $end
+$var wire 8 2 HEX1 [7:0] $end
+$var wire 8 3 HEX0 [7:0] $end
+$var reg 8 4 HEX0_d [7:0] $end
+$var reg 8 5 HEX1_d [7:0] $end
+$var reg 8 6 HEX2_d [7:0] $end
+$var reg 8 7 HEX3_d [7:0] $end
+$var reg 8 8 HEX4_d [7:0] $end
+$var reg 8 9 HEX5_d [7:0] $end
+$scope module U1 $end
+$var wire 8 : HEX [7:0] $end
+$var wire 8 ; NUM [7:0] $end
+$var reg 8 < value [7:0] $end
+$upscope $end
+$scope module U2 $end
+$var wire 8 = HEX [7:0] $end
+$var wire 8 > NUM [7:0] $end
+$var reg 8 ? value [7:0] $end
+$upscope $end
+$scope module U3 $end
+$var wire 8 @ HEX [7:0] $end
+$var wire 8 A NUM [7:0] $end
+$var reg 8 B value [7:0] $end
+$upscope $end
+$scope module U4 $end
+$var wire 8 C HEX [7:0] $end
+$var wire 8 D NUM [7:0] $end
+$var reg 8 E value [7:0] $end
+$upscope $end
+$scope module U5 $end
+$var wire 8 F HEX [7:0] $end
+$var wire 8 G NUM [7:0] $end
+$var reg 8 H value [7:0] $end
+$upscope $end
+$scope module U6 $end
+$var wire 8 I HEX [7:0] $end
+$var wire 8 J NUM [7:0] $end
+$var reg 8 K value [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module TB_Lab1_DB1 $end
+$var wire 8 L LEDR [7:0] $end
+$var reg 8 M HEX0 [7:0] $end
+$var reg 8 N HEX1 [7:0] $end
+$var reg 8 O HEX2 [7:0] $end
+$var reg 8 P HEX3 [7:0] $end
+$var reg 8 Q HEX4 [7:0] $end
+$var reg 8 R HEX5 [7:0] $end
+$var reg 2 S KEY [1:0] $end
+$var reg 8 T SW [7:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 T
+bx S
+bx R
+bx Q
+bx P
+bx O
+bx N
+bx M
+bz L
+b11000000 K
+b0 J
+b11000000 I
+b10010010 H
+b101 G
+b10010010 F
+b11000000 E
+b0 D
+b11000000 C
+b10000010 B
+b110 A
+b10000010 @
+b10011000 ?
+b1001 >
+b10011000 =
+b10011000 <
+b1001 ;
+b10011000 :
+b0 9
+b101 8
+b0 7
+b110 6
+b1001 5
+b1001 4
+b10011000 3
+b10011000 2
+b10000010 1
+b11000000 0
+b10010010 /
+b11000000 .
+bz -
+b10011000 ,
+b10011000 +
+b10000010 *
+b11000000 )
+b10010010 (
+b11000000 '
+bx &
+bz %
+z$
+z#
+bz "
+z!
+$end
+#200
+bx0 S
+#1000
+b0 S
+#1700

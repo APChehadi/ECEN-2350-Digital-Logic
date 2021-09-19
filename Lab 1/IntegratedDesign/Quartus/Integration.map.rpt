@@ -1,0 +1,850 @@
+Analysis & Synthesis report for Integration
+Mon Oct 07 11:39:04 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "Lab1DB3:U3|Compare:C1|SevenSeg:SS0"
+ 12. Port Connectivity Checks: "Lab1DB3:U3|Compare:C1|SevenSeg:SS1"
+ 13. Port Connectivity Checks: "Lab1DB3:U3|Compare:C1|SevenSeg:SS2"
+ 14. Port Connectivity Checks: "Lab1DB3:U3|Compare:C1|SevenSeg:SS3"
+ 15. Port Connectivity Checks: "Lab1DB3:U3|Compare:C1|SevenSeg:SS4"
+ 16. Port Connectivity Checks: "Lab1DB3:U3|Compare:C1|SevenSeg:SS5"
+ 17. Port Connectivity Checks: "Lab1DB3:U3"
+ 18. Port Connectivity Checks: "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U6"
+ 19. Port Connectivity Checks: "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U5"
+ 20. Port Connectivity Checks: "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U4"
+ 21. Port Connectivity Checks: "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U3"
+ 22. Port Connectivity Checks: "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U2"
+ 23. Port Connectivity Checks: "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U1"
+ 24. Port Connectivity Checks: "Lab1DB2:U2"
+ 25. Port Connectivity Checks: "Lab1:U1|Birthday:U1|SevenSeg:U6"
+ 26. Port Connectivity Checks: "Lab1:U1|Birthday:U1|SevenSeg:U5"
+ 27. Port Connectivity Checks: "Lab1:U1|Birthday:U1|SevenSeg:U4"
+ 28. Port Connectivity Checks: "Lab1:U1|Birthday:U1|SevenSeg:U3"
+ 29. Port Connectivity Checks: "Lab1:U1|Birthday:U1|SevenSeg:U2"
+ 30. Port Connectivity Checks: "Lab1:U1|Birthday:U1|SevenSeg:U1"
+ 31. Port Connectivity Checks: "Lab1:U1"
+ 32. Post-Synthesis Netlist Statistics for Top Partition
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Oct 07 11:39:04 2019       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; Integration                                 ;
+; Top-level Entity Name              ; Integration                                 ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 161                                         ;
+;     Total combinational functions  ; 161                                         ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 73                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; Integration        ; Integration        ;
+; Family name                                                      ; MAX 10 FPGA        ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                            ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------+---------+
+; ../Source/SevenSeg.v             ; yes             ; User Verilog HDL File  ; C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v    ;         ;
+; ../Source/RippleCarry.v          ; yes             ; User Verilog HDL File  ; C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v ;         ;
+; ../Source/Lab1DB3.v              ; yes             ; User Verilog HDL File  ; C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Lab1DB3.v     ;         ;
+; ../Source/Lab1DB2.v              ; yes             ; User Verilog HDL File  ; C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Lab1DB2.v     ;         ;
+; ../Source/Lab1.v                 ; yes             ; User Verilog HDL File  ; C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Lab1.v        ;         ;
+; ../Source/Integration.v          ; yes             ; User Verilog HDL File  ; C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v ;         ;
+; ../Source/Compare.v              ; yes             ; User Verilog HDL File  ; C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v     ;         ;
+; ../Source/Birthday.v             ; yes             ; User Verilog HDL File  ; C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Birthday.v    ;         ;
+; ../Source/Adder.v                ; yes             ; User Verilog HDL File  ; C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Adder.v       ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 161         ;
+;                                             ;             ;
+; Total combinational functions               ; 161         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 107         ;
+;     -- 3 input functions                    ; 34          ;
+;     -- <=2 input functions                  ; 20          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 161         ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 0           ;
+;     -- Dedicated logic registers            ; 0           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 73          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; SW[9]~input ;
+; Maximum fan-out                             ; 56          ;
+; Total fan-out                               ; 695         ;
+; Average fan-out                             ; 2.26        ;
++---------------------------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                               ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------+-------------+--------------+
+; |Integration               ; 161 (53)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 73   ; 0            ; 0          ; |Integration                                       ; Integration ; work         ;
+;    |Lab1DB2:U2|            ; 28 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Integration|Lab1DB2:U2                            ; Lab1DB2     ; work         ;
+;       |RippleCarry:U1|     ; 28 (7)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Integration|Lab1DB2:U2|RippleCarry:U1             ; RippleCarry ; work         ;
+;          |Adder:A0|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Integration|Lab1DB2:U2|RippleCarry:U1|Adder:A0    ; Adder       ; work         ;
+;          |Adder:A1|        ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Integration|Lab1DB2:U2|RippleCarry:U1|Adder:A1    ; Adder       ; work         ;
+;          |Adder:A2|        ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Integration|Lab1DB2:U2|RippleCarry:U1|Adder:A2    ; Adder       ; work         ;
+;          |Adder:A3|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Integration|Lab1DB2:U2|RippleCarry:U1|Adder:A3    ; Adder       ; work         ;
+;          |SevenSeg:U1|     ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Integration|Lab1DB2:U2|RippleCarry:U1|SevenSeg:U1 ; SevenSeg    ; work         ;
+;          |SevenSeg:U3|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Integration|Lab1DB2:U2|RippleCarry:U1|SevenSeg:U3 ; SevenSeg    ; work         ;
+;          |SevenSeg:U5|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Integration|Lab1DB2:U2|RippleCarry:U1|SevenSeg:U5 ; SevenSeg    ; work         ;
+;    |Lab1DB3:U3|            ; 80 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Integration|Lab1DB3:U3                            ; Lab1DB3     ; work         ;
+;       |Compare:C1|         ; 80 (62)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Integration|Lab1DB3:U3|Compare:C1                 ; Compare     ; work         ;
+;          |SevenSeg:SS0|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Integration|Lab1DB3:U3|Compare:C1|SevenSeg:SS0    ; SevenSeg    ; work         ;
+;          |SevenSeg:SS1|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Integration|Lab1DB3:U3|Compare:C1|SevenSeg:SS1    ; SevenSeg    ; work         ;
+;          |SevenSeg:SS4|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Integration|Lab1DB3:U3|Compare:C1|SevenSeg:SS4    ; SevenSeg    ; work         ;
+;          |SevenSeg:SS5|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Integration|Lab1DB3:U3|Compare:C1|SevenSeg:SS5    ; SevenSeg    ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                       ;
++-----------------------------------------------------+--------------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                        ; Free of Timing Hazards ;
++-----------------------------------------------------+--------------------------------------------+------------------------+
+; Lab1DB3:U3|Compare:C1|input2_d[0]                   ; Lab1DB3:U3|Compare:C1|Mux9                 ; yes                    ;
+; Lab1DB3:U3|Compare:C1|input2_d[1]                   ; Lab1DB3:U3|Compare:C1|Mux9                 ; yes                    ;
+; Lab1DB3:U3|Compare:C1|input2_d[2]                   ; Lab1DB3:U3|Compare:C1|Mux9                 ; yes                    ;
+; Lab1DB3:U3|Compare:C1|input2_d[3]                   ; Lab1DB3:U3|Compare:C1|Mux9                 ; yes                    ;
+; Lab1DB3:U3|Compare:C1|SevenSeg:SS1|value[6]         ; Lab1DB3:U3|Compare:C1|SevenSeg:SS1|WideOr1 ; yes                    ;
+; Lab1DB3:U3|Compare:C1|input1_d[0]                   ; Lab1DB3:U3|Compare:C1|Mux22                ; yes                    ;
+; Lab1DB3:U3|Compare:C1|input1_d[1]                   ; Lab1DB3:U3|Compare:C1|Mux22                ; yes                    ;
+; Lab1DB3:U3|Compare:C1|input1_d[2]                   ; Lab1DB3:U3|Compare:C1|Mux22                ; yes                    ;
+; Lab1DB3:U3|Compare:C1|input1_d[3]                   ; Lab1DB3:U3|Compare:C1|Mux22                ; yes                    ;
+; Lab1DB3:U3|Compare:C1|SevenSeg:SS5|value[6]         ; Lab1DB3:U3|Compare:C1|SevenSeg:SS5|WideOr1 ; yes                    ;
+; Lab1DB3:U3|Compare:C1|ledval[0]                     ; Lab1DB3:U3|Compare:C1|ledval[2]            ; yes                    ;
+; Lab1DB3:U3|Compare:C1|ledval[1]                     ; Lab1DB3:U3|Compare:C1|ledval[2]            ; yes                    ;
+; Lab1DB3:U3|Compare:C1|ledval[2]                     ; Lab1DB3:U3|Compare:C1|ledval[2]            ; yes                    ;
+; Lab1DB3:U3|Compare:C1|sign2_d[5]                    ; Mux8                                       ; yes                    ;
+; Lab1DB3:U3|Compare:C1|sign2_d[1]                    ; Mux8                                       ; yes                    ;
+; Lab1DB3:U3|Compare:C1|sign2_d[0]                    ; Mux8                                       ; yes                    ;
+; Lab1DB3:U3|Compare:C1|sign2_d[3]                    ; Mux8                                       ; yes                    ;
+; Lab1DB3:U3|Compare:C1|sign2_d[4]                    ; Mux8                                       ; yes                    ;
+; Lab1DB3:U3|Compare:C1|sign1_d[5]                    ; Mux8                                       ; yes                    ;
+; Lab1DB3:U3|Compare:C1|sign1_d[1]                    ; Mux8                                       ; yes                    ;
+; Lab1DB3:U3|Compare:C1|sign1_d[0]                    ; Mux8                                       ; yes                    ;
+; Lab1DB3:U3|Compare:C1|sign1_d[3]                    ; Mux8                                       ; yes                    ;
+; Lab1DB3:U3|Compare:C1|sign1_d[4]                    ; Mux8                                       ; yes                    ;
+; Number of user-specified and inferred latches = 23  ;                                            ;                        ;
++-----------------------------------------------------+--------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Integration|Mux22                           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Integration|Mux38                           ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |Integration|Mux21                           ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |Integration|Mux7                            ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Integration|Mux55                           ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Integration|Lab1DB3:U3|Compare:C1|ledval[1] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1DB3:U3|Compare:C1|SevenSeg:SS0" ;
++-----------+-------+----------+---------------------------------+
+; Port      ; Type  ; Severity ; Details                         ;
++-----------+-------+----------+---------------------------------+
+; NUM[7..4] ; Input ; Info     ; Stuck at GND                    ;
++-----------+-------+----------+---------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1DB3:U3|Compare:C1|SevenSeg:SS1" ;
++--------+-------+----------+------------------------------------+
+; Port   ; Type  ; Severity ; Details                            ;
++--------+-------+----------+------------------------------------+
+; NUM[7] ; Input ; Info     ; Stuck at GND                       ;
+; NUM[6] ; Input ; Info     ; Stuck at VCC                       ;
+; NUM[2] ; Input ; Info     ; Stuck at GND                       ;
++--------+-------+----------+------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1DB3:U3|Compare:C1|SevenSeg:SS2" ;
++-----------+-------+----------+---------------------------------+
+; Port      ; Type  ; Severity ; Details                         ;
++-----------+-------+----------+---------------------------------+
+; NUM[4..3] ; Input ; Info     ; Stuck at VCC                    ;
+; NUM[2..0] ; Input ; Info     ; Stuck at GND                    ;
+; NUM[7]    ; Input ; Info     ; Stuck at GND                    ;
+; NUM[6]    ; Input ; Info     ; Stuck at VCC                    ;
+; NUM[5]    ; Input ; Info     ; Stuck at GND                    ;
++-----------+-------+----------+---------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1DB3:U3|Compare:C1|SevenSeg:SS3" ;
++-----------+-------+----------+---------------------------------+
+; Port      ; Type  ; Severity ; Details                         ;
++-----------+-------+----------+---------------------------------+
+; NUM[4..3] ; Input ; Info     ; Stuck at VCC                    ;
+; NUM[2..0] ; Input ; Info     ; Stuck at GND                    ;
+; NUM[7]    ; Input ; Info     ; Stuck at GND                    ;
+; NUM[6]    ; Input ; Info     ; Stuck at VCC                    ;
+; NUM[5]    ; Input ; Info     ; Stuck at GND                    ;
++-----------+-------+----------+---------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1DB3:U3|Compare:C1|SevenSeg:SS4" ;
++-----------+-------+----------+---------------------------------+
+; Port      ; Type  ; Severity ; Details                         ;
++-----------+-------+----------+---------------------------------+
+; NUM[7..4] ; Input ; Info     ; Stuck at GND                    ;
++-----------+-------+----------+---------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1DB3:U3|Compare:C1|SevenSeg:SS5" ;
++--------+-------+----------+------------------------------------+
+; Port   ; Type  ; Severity ; Details                            ;
++--------+-------+----------+------------------------------------+
+; NUM[7] ; Input ; Info     ; Stuck at GND                       ;
+; NUM[6] ; Input ; Info     ; Stuck at VCC                       ;
+; NUM[2] ; Input ; Info     ; Stuck at GND                       ;
++--------+-------+----------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1DB3:U3"                                                                                                                                          ;
++---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                                                                                                                      ;
++---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; ADC_CLK_10    ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; MAX10_CLK1_50 ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; MAX10_CLK2_50 ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U6" ;
++--------+-------+----------+---------------------------------------+
+; Port   ; Type  ; Severity ; Details                               ;
++--------+-------+----------+---------------------------------------+
+; NUM[7] ; Input ; Info     ; Stuck at GND                          ;
+; NUM[2] ; Input ; Info     ; Stuck at GND                          ;
++--------+-------+----------+---------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U5" ;
++-----------+-------+----------+------------------------------------+
+; Port      ; Type  ; Severity ; Details                            ;
++-----------+-------+----------+------------------------------------+
+; NUM[7..4] ; Input ; Info     ; Stuck at GND                       ;
++-----------+-------+----------+------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U4" ;
++--------+-------+----------+---------------------------------------+
+; Port   ; Type  ; Severity ; Details                               ;
++--------+-------+----------+---------------------------------------+
+; NUM[7] ; Input ; Info     ; Stuck at GND                          ;
+; NUM[6] ; Input ; Info     ; Stuck at VCC                          ;
+; NUM[2] ; Input ; Info     ; Stuck at GND                          ;
++--------+-------+----------+---------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U3" ;
++-----------+-------+----------+------------------------------------+
+; Port      ; Type  ; Severity ; Details                            ;
++-----------+-------+----------+------------------------------------+
+; NUM[7..4] ; Input ; Info     ; Stuck at GND                       ;
++-----------+-------+----------+------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U2" ;
++--------+-------+----------+---------------------------------------+
+; Port   ; Type  ; Severity ; Details                               ;
++--------+-------+----------+---------------------------------------+
+; NUM[7] ; Input ; Info     ; Stuck at GND                          ;
+; NUM[6] ; Input ; Info     ; Stuck at VCC                          ;
+; NUM[2] ; Input ; Info     ; Stuck at GND                          ;
++--------+-------+----------+---------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U1" ;
++-----------+-------+----------+------------------------------------+
+; Port      ; Type  ; Severity ; Details                            ;
++-----------+-------+----------+------------------------------------+
+; NUM[7..4] ; Input ; Info     ; Stuck at GND                       ;
++-----------+-------+----------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1DB2:U2"                                                                                                                                          ;
++---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                                                                                                                      ;
++---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; ADC_CLK_10    ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; MAX10_CLK1_50 ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; MAX10_CLK2_50 ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1:U1|Birthday:U1|SevenSeg:U6" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; NUM  ; Input ; Info     ; Stuck at GND                      ;
++------+-------+----------+-----------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1:U1|Birthday:U1|SevenSeg:U5" ;
++-----------+-------+----------+------------------------------+
+; Port      ; Type  ; Severity ; Details                      ;
++-----------+-------+----------+------------------------------+
+; NUM[7..4] ; Input ; Info     ; Stuck at GND                 ;
+; NUM[1]    ; Input ; Info     ; Stuck at GND                 ;
++-----------+-------+----------+------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1:U1|Birthday:U1|SevenSeg:U4" ;
++-----------+-------+----------+------------------------------+
+; Port      ; Type  ; Severity ; Details                      ;
++-----------+-------+----------+------------------------------+
+; NUM[7..2] ; Input ; Info     ; Stuck at GND                 ;
+; NUM[0]    ; Input ; Info     ; Stuck at GND                 ;
++-----------+-------+----------+------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1:U1|Birthday:U1|SevenSeg:U3" ;
++-----------+-------+----------+------------------------------+
+; Port      ; Type  ; Severity ; Details                      ;
++-----------+-------+----------+------------------------------+
+; NUM[7..4] ; Input ; Info     ; Stuck at GND                 ;
+; NUM[0]    ; Input ; Info     ; Stuck at GND                 ;
++-----------+-------+----------+------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1:U1|Birthday:U1|SevenSeg:U2" ;
++-----------+-------+----------+------------------------------+
+; Port      ; Type  ; Severity ; Details                      ;
++-----------+-------+----------+------------------------------+
+; NUM[7..4] ; Input ; Info     ; Stuck at GND                 ;
+; NUM[2..1] ; Input ; Info     ; Stuck at GND                 ;
+; NUM[3]    ; Input ; Info     ; Stuck at VCC                 ;
+; NUM[0]    ; Input ; Info     ; Stuck at VCC                 ;
++-----------+-------+----------+------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1:U1|Birthday:U1|SevenSeg:U1" ;
++-----------+-------+----------+------------------------------+
+; Port      ; Type  ; Severity ; Details                      ;
++-----------+-------+----------+------------------------------+
+; NUM[7..4] ; Input ; Info     ; Stuck at GND                 ;
+; NUM[2..1] ; Input ; Info     ; Stuck at GND                 ;
+; NUM[3]    ; Input ; Info     ; Stuck at VCC                 ;
+; NUM[0]    ; Input ; Info     ; Stuck at VCC                 ;
++-----------+-------+----------+------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab1:U1"                                                                                                                                             ;
++---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                                                                                                                      ;
++---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; ADC_CLK_10    ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; MAX10_CLK1_50 ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; MAX10_CLK2_50 ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 73                          ;
+; cycloneiii_lcell_comb ; 163                         ;
+;     normal            ; 163                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 20                          ;
+;         3 data inputs ; 34                          ;
+;         4 data inputs ; 107                         ;
+;                       ;                             ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 5.07                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Mon Oct 07 11:38:54 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Integration -c Integration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/onedrive - ucb-o365/ecen 2350/lab1/integrateddesign/source/tb_lab1_db3.v
+    Info (12023): Found entity 1: TB_Lab1_DB3 File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/TB_Lab1_DB3.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/onedrive - ucb-o365/ecen 2350/lab1/integrateddesign/source/tb_lab1_db2.v
+    Info (12023): Found entity 1: TB_Lab1_DB2 File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/TB_Lab1_DB2.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/onedrive - ucb-o365/ecen 2350/lab1/integrateddesign/source/tb_lab1_db1.v
+    Info (12023): Found entity 1: TB_Lab1_DB1 File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/TB_Lab1_DB1.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/onedrive - ucb-o365/ecen 2350/lab1/integrateddesign/source/sevenseg.v
+    Info (12023): Found entity 1: SevenSeg File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/onedrive - ucb-o365/ecen 2350/lab1/integrateddesign/source/ripplecarry.v
+    Info (12023): Found entity 1: RippleCarry File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/onedrive - ucb-o365/ecen 2350/lab1/integrateddesign/source/lab1db3.v
+    Info (12023): Found entity 1: Lab1DB3 File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Lab1DB3.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/onedrive - ucb-o365/ecen 2350/lab1/integrateddesign/source/lab1db2.v
+    Info (12023): Found entity 1: Lab1DB2 File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Lab1DB2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/onedrive - ucb-o365/ecen 2350/lab1/integrateddesign/source/lab1.v
+    Info (12023): Found entity 1: Lab1 File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Lab1.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/onedrive - ucb-o365/ecen 2350/lab1/integrateddesign/source/integration.v
+    Info (12023): Found entity 1: Integration File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/onedrive - ucb-o365/ecen 2350/lab1/integrateddesign/source/compare.v
+    Info (12023): Found entity 1: Compare File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/onedrive - ucb-o365/ecen 2350/lab1/integrateddesign/source/birthday.v
+    Info (12023): Found entity 1: Birthday File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Birthday.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/onedrive - ucb-o365/ecen 2350/lab1/integrateddesign/source/adder.v
+    Info (12023): Found entity 1: Adder File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Adder.v Line: 1
+Info (12127): Elaborating entity "Integration" for the top level hierarchy
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(77): variable "DB1_H0" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 77
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(78): variable "DB1_H1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 78
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(79): variable "DB1_H2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 79
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(80): variable "DB1_H3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 80
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(81): variable "DB1_H4" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 81
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(82): variable "DB1_H5" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 82
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(83): variable "DB1_LEDR" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 83
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(86): variable "DB2_H0" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 86
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(87): variable "DB2_H1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 87
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(88): variable "DB2_H2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 88
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(89): variable "DB2_H3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 89
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(90): variable "DB2_H4" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 90
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(91): variable "DB2_H5" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 91
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(92): variable "DB2_LEDR" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 92
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(95): variable "DB3_H0" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 95
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(96): variable "DB3_H1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 96
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(97): variable "DB3_H2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 97
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(98): variable "DB3_H3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 98
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(99): variable "DB3_H4" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 99
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(100): variable "DB3_H5" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 100
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(101): variable "DB3_LEDR" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 101
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(104): variable "DB3_H0" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 104
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(105): variable "DB3_H1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 105
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(106): variable "DB3_H2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 106
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(107): variable "DB3_H3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 107
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(108): variable "DB3_H4" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 108
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(109): variable "DB3_H5" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 109
+Warning (10235): Verilog HDL Always Construct warning at Integration.v(110): variable "DB3_LEDR" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 110
+Info (12128): Elaborating entity "Lab1" for hierarchy "Lab1:U1" File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 69
+Info (12128): Elaborating entity "Birthday" for hierarchy "Lab1:U1|Birthday:U1" File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Lab1.v Line: 52
+Info (12128): Elaborating entity "SevenSeg" for hierarchy "Lab1:U1|Birthday:U1|SevenSeg:U1" File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Birthday.v Line: 44
+Warning (10270): Verilog HDL Case Statement warning at SevenSeg.v(18): incomplete case statement has no default case item File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 18
+Warning (10240): Verilog HDL Always Construct warning at SevenSeg.v(16): inferring latch(es) for variable "value", which holds its previous value in one or more paths through the always construct File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Info (10041): Inferred latch for "value[0]" at SevenSeg.v(16) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Info (10041): Inferred latch for "value[1]" at SevenSeg.v(16) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Info (10041): Inferred latch for "value[2]" at SevenSeg.v(16) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Info (10041): Inferred latch for "value[3]" at SevenSeg.v(16) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Info (10041): Inferred latch for "value[4]" at SevenSeg.v(16) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Info (10041): Inferred latch for "value[5]" at SevenSeg.v(16) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Info (10041): Inferred latch for "value[6]" at SevenSeg.v(16) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Info (10041): Inferred latch for "value[7]" at SevenSeg.v(16) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Info (12128): Elaborating entity "Lab1DB2" for hierarchy "Lab1DB2:U2" File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 70
+Info (12128): Elaborating entity "RippleCarry" for hierarchy "Lab1DB2:U2|RippleCarry:U1" File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Lab1DB2.v Line: 30
+Warning (10240): Verilog HDL Always Construct warning at RippleCarry.v(33): inferring latch(es) for variable "sign1_d", which holds its previous value in one or more paths through the always construct File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 33
+Warning (10240): Verilog HDL Always Construct warning at RippleCarry.v(65): inferring latch(es) for variable "sign2_d", which holds its previous value in one or more paths through the always construct File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at RippleCarry.v(124): inferring latch(es) for variable "sign_s", which holds its previous value in one or more paths through the always construct File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 124
+Info (10041): Inferred latch for "sign_s[0]" at RippleCarry.v(135) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 135
+Info (10041): Inferred latch for "sign_s[1]" at RippleCarry.v(135) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 135
+Info (10041): Inferred latch for "sign_s[2]" at RippleCarry.v(135) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 135
+Info (10041): Inferred latch for "sign_s[3]" at RippleCarry.v(135) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 135
+Info (10041): Inferred latch for "sign_s[4]" at RippleCarry.v(135) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 135
+Info (10041): Inferred latch for "sign_s[5]" at RippleCarry.v(135) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 135
+Info (10041): Inferred latch for "sign_s[6]" at RippleCarry.v(135) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 135
+Info (10041): Inferred latch for "sign_s[7]" at RippleCarry.v(135) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 135
+Info (10041): Inferred latch for "sign2_d[0]" at RippleCarry.v(70) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 70
+Info (10041): Inferred latch for "sign2_d[1]" at RippleCarry.v(70) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 70
+Info (10041): Inferred latch for "sign2_d[2]" at RippleCarry.v(70) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 70
+Info (10041): Inferred latch for "sign2_d[3]" at RippleCarry.v(70) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 70
+Info (10041): Inferred latch for "sign2_d[4]" at RippleCarry.v(70) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 70
+Info (10041): Inferred latch for "sign2_d[5]" at RippleCarry.v(70) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 70
+Info (10041): Inferred latch for "sign2_d[6]" at RippleCarry.v(70) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 70
+Info (10041): Inferred latch for "sign2_d[7]" at RippleCarry.v(70) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 70
+Info (10041): Inferred latch for "sign1_d[0]" at RippleCarry.v(38) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 38
+Info (10041): Inferred latch for "sign1_d[1]" at RippleCarry.v(38) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 38
+Info (10041): Inferred latch for "sign1_d[2]" at RippleCarry.v(38) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 38
+Info (10041): Inferred latch for "sign1_d[3]" at RippleCarry.v(38) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 38
+Info (10041): Inferred latch for "sign1_d[4]" at RippleCarry.v(38) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 38
+Info (10041): Inferred latch for "sign1_d[5]" at RippleCarry.v(38) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 38
+Info (10041): Inferred latch for "sign1_d[6]" at RippleCarry.v(38) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 38
+Info (10041): Inferred latch for "sign1_d[7]" at RippleCarry.v(38) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 38
+Info (12128): Elaborating entity "Adder" for hierarchy "Lab1DB2:U2|RippleCarry:U1|Adder:A0" File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/RippleCarry.v Line: 116
+Info (12128): Elaborating entity "Lab1DB3" for hierarchy "Lab1DB3:U3" File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 71
+Info (12128): Elaborating entity "Compare" for hierarchy "Lab1DB3:U3|Compare:C1" File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Lab1DB3.v Line: 25
+Warning (10240): Verilog HDL Always Construct warning at Compare.v(28): inferring latch(es) for variable "sign1_d", which holds its previous value in one or more paths through the always construct File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Warning (10240): Verilog HDL Always Construct warning at Compare.v(28): inferring latch(es) for variable "sign2_d", which holds its previous value in one or more paths through the always construct File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Warning (10240): Verilog HDL Always Construct warning at Compare.v(28): inferring latch(es) for variable "input1_d", which holds its previous value in one or more paths through the always construct File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Warning (10240): Verilog HDL Always Construct warning at Compare.v(28): inferring latch(es) for variable "input2_d", which holds its previous value in one or more paths through the always construct File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Warning (10240): Verilog HDL Always Construct warning at Compare.v(28): inferring latch(es) for variable "ledval", which holds its previous value in one or more paths through the always construct File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Warning (10034): Output port "LEDR[7..3]" at Compare.v(12) has no driver File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 12
+Info (10041): Inferred latch for "input2_d[0]" at Compare.v(28) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Info (10041): Inferred latch for "input2_d[1]" at Compare.v(28) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Info (10041): Inferred latch for "input2_d[2]" at Compare.v(28) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Info (10041): Inferred latch for "input2_d[3]" at Compare.v(28) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Info (10041): Inferred latch for "input2_d[4]" at Compare.v(28) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Info (10041): Inferred latch for "input2_d[5]" at Compare.v(28) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Info (10041): Inferred latch for "input2_d[6]" at Compare.v(28) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Info (10041): Inferred latch for "input2_d[7]" at Compare.v(28) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Info (10041): Inferred latch for "input1_d[0]" at Compare.v(28) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Info (10041): Inferred latch for "input1_d[1]" at Compare.v(28) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Info (10041): Inferred latch for "input1_d[2]" at Compare.v(28) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Info (10041): Inferred latch for "input1_d[3]" at Compare.v(28) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Info (10041): Inferred latch for "input1_d[4]" at Compare.v(28) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Info (10041): Inferred latch for "input1_d[5]" at Compare.v(28) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Info (10041): Inferred latch for "input1_d[6]" at Compare.v(28) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Info (10041): Inferred latch for "input1_d[7]" at Compare.v(28) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+Info (10041): Inferred latch for "ledval[0]" at Compare.v(131) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 131
+Info (10041): Inferred latch for "ledval[1]" at Compare.v(131) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 131
+Info (10041): Inferred latch for "ledval[2]" at Compare.v(131) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 131
+Info (10041): Inferred latch for "sign2_d[0]" at Compare.v(35) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Info (10041): Inferred latch for "sign2_d[1]" at Compare.v(35) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Info (10041): Inferred latch for "sign2_d[2]" at Compare.v(35) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Info (10041): Inferred latch for "sign2_d[3]" at Compare.v(35) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Info (10041): Inferred latch for "sign2_d[4]" at Compare.v(35) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Info (10041): Inferred latch for "sign2_d[5]" at Compare.v(35) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Info (10041): Inferred latch for "sign2_d[6]" at Compare.v(35) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Info (10041): Inferred latch for "sign2_d[7]" at Compare.v(35) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Info (10041): Inferred latch for "sign1_d[0]" at Compare.v(35) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Info (10041): Inferred latch for "sign1_d[1]" at Compare.v(35) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Info (10041): Inferred latch for "sign1_d[2]" at Compare.v(35) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Info (10041): Inferred latch for "sign1_d[3]" at Compare.v(35) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Info (10041): Inferred latch for "sign1_d[4]" at Compare.v(35) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Info (10041): Inferred latch for "sign1_d[5]" at Compare.v(35) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Info (10041): Inferred latch for "sign1_d[6]" at Compare.v(35) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Info (10041): Inferred latch for "sign1_d[7]" at Compare.v(35) File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Warning (14026): LATCH primitive "Lab1DB3:U3|Compare:C1|SevenSeg:SS0|value[1]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB3:U3|Compare:C1|SevenSeg:SS0|value[2]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB3:U3|Compare:C1|SevenSeg:SS0|value[3]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB3:U3|Compare:C1|SevenSeg:SS0|value[4]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB3:U3|Compare:C1|SevenSeg:SS0|value[5]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB3:U3|Compare:C1|SevenSeg:SS0|value[6]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB3:U3|Compare:C1|SevenSeg:SS4|value[1]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB3:U3|Compare:C1|SevenSeg:SS4|value[2]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB3:U3|Compare:C1|SevenSeg:SS4|value[3]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB3:U3|Compare:C1|SevenSeg:SS4|value[4]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB3:U3|Compare:C1|SevenSeg:SS4|value[5]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB3:U3|Compare:C1|SevenSeg:SS4|value[6]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U5|value[1]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U5|value[2]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U5|value[3]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U5|value[4]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U5|value[5]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U5|value[6]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U3|value[1]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U3|value[2]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U3|value[3]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U3|value[4]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U3|value[5]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U3|value[6]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U1|value[1]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U1|value[2]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U1|value[3]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U1|value[4]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U1|value[5]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U1|value[6]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U5|value[1]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U5|value[2]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U5|value[3]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U5|value[4]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U5|value[5]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U5|value[6]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U4|value[1]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U4|value[2]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U4|value[3]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U4|value[4]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U4|value[5]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U4|value[6]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U3|value[1]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U3|value[2]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U3|value[3]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U3|value[4]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U3|value[5]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U3|value[6]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB3:U3|Compare:C1|SevenSeg:SS0|value[0]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB3:U3|Compare:C1|SevenSeg:SS4|value[0]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U5|value[0]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U3|value[0]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U1|value[0]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U5|value[0]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U4|value[0]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1:U1|Birthday:U1|SevenSeg:U3|value[0]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U4|value[6]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U2|value[6]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U6|value[0]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U6|value[1]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U6|value[2]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U6|value[3]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U6|value[4]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U6|value[5]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "Lab1DB2:U2|RippleCarry:U1|SevenSeg:U6|value[6]" is permanently enabled File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "Lab1DB3:U3|Compare:C1|sign2_d[1]" merged with LATCH primitive "Lab1DB3:U3|Compare:C1|sign2_d[5]" File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+    Info (13026): Duplicate LATCH primitive "Lab1DB3:U3|Compare:C1|sign2_d[0]" merged with LATCH primitive "Lab1DB3:U3|Compare:C1|sign2_d[5]" File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+    Info (13026): Duplicate LATCH primitive "Lab1DB3:U3|Compare:C1|sign2_d[4]" merged with LATCH primitive "Lab1DB3:U3|Compare:C1|sign2_d[3]" File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+    Info (13026): Duplicate LATCH primitive "Lab1DB3:U3|Compare:C1|sign1_d[1]" merged with LATCH primitive "Lab1DB3:U3|Compare:C1|sign1_d[5]" File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+    Info (13026): Duplicate LATCH primitive "Lab1DB3:U3|Compare:C1|sign1_d[0]" merged with LATCH primitive "Lab1DB3:U3|Compare:C1|sign1_d[5]" File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+    Info (13026): Duplicate LATCH primitive "Lab1DB3:U3|Compare:C1|sign1_d[4]" merged with LATCH primitive "Lab1DB3:U3|Compare:C1|sign1_d[3]" File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Warning (13012): Latch Lab1DB3:U3|Compare:C1|input2_d[1] has unsafe behavior File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SW[3] File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 24
+Warning (13012): Latch Lab1DB3:U3|Compare:C1|input2_d[2] has unsafe behavior File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SW[3] File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 24
+Warning (13012): Latch Lab1DB3:U3|Compare:C1|input2_d[3] has unsafe behavior File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SW[3] File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 24
+Warning (13012): Latch Lab1DB3:U3|Compare:C1|SevenSeg:SS1|value[6] has unsafe behavior File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab1DB3:U3|Compare:C1|sign2_d[5] File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Warning (13012): Latch Lab1DB3:U3|Compare:C1|input1_d[1] has unsafe behavior File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SW[7] File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 24
+Warning (13012): Latch Lab1DB3:U3|Compare:C1|input1_d[2] has unsafe behavior File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SW[7] File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 24
+Warning (13012): Latch Lab1DB3:U3|Compare:C1|input1_d[3] has unsafe behavior File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SW[7] File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 24
+Warning (13012): Latch Lab1DB3:U3|Compare:C1|SevenSeg:SS5|value[6] has unsafe behavior File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/SevenSeg.v Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab1DB3:U3|Compare:C1|sign1_d[5] File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Warning (13012): Latch Lab1DB3:U3|Compare:C1|ledval[0] has unsafe behavior File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 131
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab1DB3:U3|Compare:C1|sign1_d[5] File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Warning (13012): Latch Lab1DB3:U3|Compare:C1|ledval[1] has unsafe behavior File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 131
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab1DB3:U3|Compare:C1|sign1_d[5] File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Warning (13012): Latch Lab1DB3:U3|Compare:C1|ledval[2] has unsafe behavior File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 131
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab1DB3:U3|Compare:C1|sign2_d[5] File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+Warning (13012): Latch Lab1DB3:U3|Compare:C1|sign2_d[5] has unsafe behavior File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal SW[8] File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 24
+Warning (13012): Latch Lab1DB3:U3|Compare:C1|sign2_d[3] has unsafe behavior File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal SW[8] File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 24
+Warning (13012): Latch Lab1DB3:U3|Compare:C1|sign1_d[5] has unsafe behavior File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal SW[8] File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 24
+Warning (13012): Latch Lab1DB3:U3|Compare:C1|sign1_d[3] has unsafe behavior File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Compare.v Line: 35
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal SW[8] File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 24
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 9
+    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 10
+    Warning (13410): Pin "HEX2[7]" is stuck at VCC File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 11
+    Warning (13410): Pin "HEX3[7]" is stuck at VCC File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 12
+    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 13
+    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 14
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ADC_CLK_10" File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 4
+    Warning (15610): No output dependent on input pin "MAX10_CLK1_50" File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 5
+    Warning (15610): No output dependent on input pin "MAX10_CLK2_50" File: C:/Users/adamp/OneDrive - UCB-O365/ECEN 2350/Lab1/IntegratedDesign/Source/Integration.v Line: 6
+Info (21057): Implemented 234 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 58 output pins
+    Info (21061): Implemented 161 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 147 warnings
+    Info: Peak virtual memory: 4795 megabytes
+    Info: Processing ended: Mon Oct 07 11:39:04 2019
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:18
+
+

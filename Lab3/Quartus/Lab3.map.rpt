@@ -1,0 +1,758 @@
+Analysis & Synthesis report for Lab3
+Wed Dec 11 17:50:30 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for state_machine:SM0|memory:M0|altsyncram:altsyncram_component|altsyncram_n9b1:auto_generated
+ 14. Parameter Settings for User Entity Instance: clock_divider:CD0
+ 15. Parameter Settings for User Entity Instance: CSL:CSL0
+ 16. Parameter Settings for User Entity Instance: NSL:NSL0
+ 17. Parameter Settings for User Entity Instance: state_machine:SM0
+ 18. Parameter Settings for User Entity Instance: state_machine:SM0|memory:M0|altsyncram:altsyncram_component
+ 19. Parameter Settings for User Entity Instance: OL:OL0
+ 20. altsyncram Parameter Settings by Entity Instance
+ 21. Port Connectivity Checks: "OL:OL0|SevenSeg:SS0"
+ 22. Port Connectivity Checks: "state_machine:SM0|memory:M0"
+ 23. Port Connectivity Checks: "SevenSeg:SS5"
+ 24. Port Connectivity Checks: "SevenSeg:SS4"
+ 25. Port Connectivity Checks: "SevenSeg:SS3"
+ 26. Port Connectivity Checks: "SevenSeg:SS2"
+ 27. Port Connectivity Checks: "SevenSeg:SS1"
+ 28. Post-Synthesis Netlist Statistics for Top Partition
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
+ 31. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Dec 11 17:50:30 2019       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; Lab3                                        ;
+; Top-level Entity Name              ; Lab3                                        ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 71                                          ;
+;     Total combinational functions  ; 71                                          ;
+;     Dedicated logic registers      ; 45                                          ;
+; Total registers                    ; 45                                          ;
+; Total pins                         ; 71                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 12                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; Lab3               ; Lab3               ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                            ;
++-------------------------------------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                              ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                 ; Library ;
++-------------------------------------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; ../Source/output_mux.v                                                        ; yes             ; User Verilog HDL File                  ; C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/output_mux.v            ;         ;
+; ../Source/memory.v                                                            ; yes             ; User Wizard-Generated File             ; C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/memory.v                ;         ;
+; ../Source/state_machine.v                                                     ; yes             ; User Verilog HDL File                  ; C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/state_machine.v         ;         ;
+; ../Source/SevenSeg.v                                                          ; yes             ; User Verilog HDL File                  ; C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v              ;         ;
+; ../Source/OL.v                                                                ; yes             ; User Verilog HDL File                  ; C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/OL.v                    ;         ;
+; ../Source/NSL.v                                                               ; yes             ; User Verilog HDL File                  ; C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/NSL.v                   ;         ;
+; ../Source/Lab3.v                                                              ; yes             ; User Verilog HDL File                  ; C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v                  ;         ;
+; ../Source/CSL.v                                                               ; yes             ; User Verilog HDL File                  ; C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/CSL.v                   ;         ;
+; ../Source/clock_divider.v                                                     ; yes             ; User Verilog HDL File                  ; C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/clock_divider.v         ;         ;
+; altsyncram.tdf                                                                ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                        ;         ;
+; stratix_ram_block.inc                                                         ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                 ;         ;
+; lpm_mux.inc                                                                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                           ;         ;
+; lpm_decode.inc                                                                ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                        ;         ;
+; aglobal181.inc                                                                ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                        ;         ;
+; a_rdenreg.inc                                                                 ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                         ;         ;
+; altrom.inc                                                                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                            ;         ;
+; altram.inc                                                                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                            ;         ;
+; altdpram.inc                                                                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                          ;         ;
+; db/altsyncram_n9b1.tdf                                                        ; yes             ; Auto-Generated Megafunction            ; C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Quartus/db/altsyncram_n9b1.tdf ;         ;
+; /users/adamp/documents/github/ecen-2350-dgitial-logic-lab-3/source/memory.mif ; yes             ; Auto-Found Memory Initialization File  ; /users/adamp/documents/github/ecen-2350-dgitial-logic-lab-3/source/memory.mif                ;         ;
++-------------------------------------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 71          ;
+;                                             ;             ;
+; Total combinational functions               ; 71          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 24          ;
+;     -- 3 input functions                    ; 10          ;
+;     -- <=2 input functions                  ; 37          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 44          ;
+;     -- arithmetic mode                      ; 27          ;
+;                                             ;             ;
+; Total registers                             ; 45          ;
+;     -- Dedicated logic registers            ; 45          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 71          ;
+; Total memory bits                           ; 12          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; reset_latch ;
+; Maximum fan-out                             ; 37          ;
+; Total fan-out                               ; 410         ;
+; Average fan-out                             ; 1.57        ;
++---------------------------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                   ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                              ; Entity Name     ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |Lab3                                        ; 71 (2)              ; 45 (2)                    ; 12          ; 0          ; 0            ; 0       ; 0         ; 71   ; 0            ; 0          ; |Lab3                                                                                            ; Lab3            ; work         ;
+;    |CSL:CSL0|                                ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|CSL:CSL0                                                                                   ; CSL             ; work         ;
+;    |NSL:NSL0|                                ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|NSL:NSL0                                                                                   ; NSL             ; work         ;
+;    |OL:OL0|                                  ; 14 (12)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|OL:OL0                                                                                     ; OL              ; work         ;
+;       |SevenSeg:SS0|                         ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|OL:OL0|SevenSeg:SS0                                                                        ; SevenSeg        ; work         ;
+;    |clock_divider:CD0|                       ; 40 (40)             ; 25 (25)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|clock_divider:CD0                                                                          ; clock_divider   ; work         ;
+;    |output_mux:OM0|                          ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|output_mux:OM0                                                                             ; output_mux      ; work         ;
+;    |state_machine:SM0|                       ; 11 (11)             ; 7 (7)                     ; 12          ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|state_machine:SM0                                                                          ; state_machine   ; work         ;
+;       |memory:M0|                            ; 0 (0)               ; 0 (0)                     ; 12          ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|state_machine:SM0|memory:M0                                                                ; memory          ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 12          ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|state_machine:SM0|memory:M0|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
+;             |altsyncram_n9b1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 12          ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|state_machine:SM0|memory:M0|altsyncram:altsyncram_component|altsyncram_n9b1:auto_generated ; altsyncram_n9b1 ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                              ;
++-------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------------+
+; Name                                                                                                  ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                  ;
++-------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------------+
+; state_machine:SM0|memory:M0|altsyncram:altsyncram_component|altsyncram_n9b1:auto_generated|ALTSYNCRAM ; M9K  ; ROM  ; 256          ; 8            ; --           ; --           ; 2048 ; ../Source/memory.mif ;
++-------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                  ;
++--------+--------------+---------+--------------+--------------+-----------------------------------+--------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                   ; IP Include File    ;
++--------+--------------+---------+--------------+--------------+-----------------------------------+--------------------+
+; Altera ; ROM: 1-PORT  ; 18.1    ; N/A          ; N/A          ; |Lab3|state_machine:SM0|memory:M0 ; ../Source/memory.v ;
++--------+--------------+---------+--------------+--------------+-----------------------------------+--------------------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; CSL:CSL0|CurrentState[2]              ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 45    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 32    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |Lab3|OL:OL0|LEDR_R[0]     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |Lab3|OL:OL0|LEDR_L[0]     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Lab3|OL:OL0|turn_cnt[0]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Source assignments for state_machine:SM0|memory:M0|altsyncram:altsyncram_component|altsyncram_n9b1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                  ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                   ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clock_divider:CD0 ;
++----------------+---------+-------------------------------------+
+; Parameter Name ; Value   ; Type                                ;
++----------------+---------+-------------------------------------+
+; clk_div        ; 1000000 ; Signed Integer                      ;
++----------------+---------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CSL:CSL0 ;
++--------------------+-------+--------------------------+
+; Parameter Name     ; Value ; Type                     ;
++--------------------+-------+--------------------------+
+; par_idle           ; 000   ; Unsigned Binary          ;
+; par_hazard         ; 001   ; Unsigned Binary          ;
+; par_turn_sig_left  ; 010   ; Unsigned Binary          ;
+; par_turn_sig_right ; 011   ; Unsigned Binary          ;
++--------------------+-------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: NSL:NSL0 ;
++--------------------+-------+--------------------------+
+; Parameter Name     ; Value ; Type                     ;
++--------------------+-------+--------------------------+
+; par_idle           ; 000   ; Unsigned Binary          ;
+; par_hazard         ; 001   ; Unsigned Binary          ;
+; par_turn_sig_left  ; 010   ; Unsigned Binary          ;
+; par_turn_sig_right ; 011   ; Unsigned Binary          ;
++--------------------+-------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: state_machine:SM0 ;
++--------------------+-------+-----------------------------------+
+; Parameter Name     ; Value ; Type                              ;
++--------------------+-------+-----------------------------------+
+; par_idle           ; 000   ; Unsigned Binary                   ;
+; par_hazard         ; 001   ; Unsigned Binary                   ;
+; par_turn_sig_left  ; 010   ; Unsigned Binary                   ;
+; par_turn_sig_right ; 011   ; Unsigned Binary                   ;
++--------------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: state_machine:SM0|memory:M0|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+----------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                         ;
++------------------------------------+----------------------+----------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                      ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                               ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                      ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                      ;
+; WIDTH_A                            ; 8                    ; Signed Integer                               ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                               ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                               ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                      ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                      ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                      ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                      ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                      ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                      ;
+; WIDTH_B                            ; 1                    ; Untyped                                      ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                      ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                      ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                      ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                      ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                      ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                      ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                      ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                      ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                      ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                      ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                      ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                      ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                      ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                               ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                      ;
+; RAM_BLOCK_TYPE                     ; M9K                  ; Untyped                                      ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                      ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                      ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                      ;
+; INIT_FILE                          ; ../Source/memory.mif ; Untyped                                      ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                      ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                      ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                      ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                      ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                      ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                      ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                      ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                      ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                      ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                      ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                      ;
+; DEVICE_FAMILY                      ; MAX 10               ; Untyped                                      ;
+; CBXI_PARAMETER                     ; altsyncram_n9b1      ; Untyped                                      ;
++------------------------------------+----------------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Parameter Settings for User Entity Instance: OL:OL0 ;
++--------------------+-------+------------------------+
+; Parameter Name     ; Value ; Type                   ;
++--------------------+-------+------------------------+
+; par_idle           ; 000   ; Unsigned Binary        ;
+; par_hazard         ; 001   ; Unsigned Binary        ;
+; par_turn_sig_left  ; 010   ; Unsigned Binary        ;
+; par_turn_sig_right ; 011   ; Unsigned Binary        ;
++--------------------+-------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                        ;
++-------------------------------------------+-------------------------------------------------------------+
+; Name                                      ; Value                                                       ;
++-------------------------------------------+-------------------------------------------------------------+
+; Number of entity instances                ; 1                                                           ;
+; Entity Instance                           ; state_machine:SM0|memory:M0|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                         ;
+;     -- WIDTH_A                            ; 8                                                           ;
+;     -- NUMWORDS_A                         ; 256                                                         ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                      ;
+;     -- WIDTH_B                            ; 1                                                           ;
+;     -- NUMWORDS_B                         ; 1                                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                      ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                ;
+;     -- RAM_BLOCK_TYPE                     ; M9K                                                         ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                   ;
++-------------------------------------------+-------------------------------------------------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "OL:OL0|SevenSeg:SS0" ;
++-----------+-------+----------+------------------+
+; Port      ; Type  ; Severity ; Details          ;
++-----------+-------+----------+------------------+
+; NUM[7..3] ; Input ; Info     ; Stuck at GND     ;
++-----------+-------+----------+------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "state_machine:SM0|memory:M0"                                                                 ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; address[7..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; q[7..3]       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "SevenSeg:SS5"    ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; NUM[4..3] ; Input ; Info     ; Stuck at VCC ;
+; NUM[2..0] ; Input ; Info     ; Stuck at GND ;
+; NUM[7]    ; Input ; Info     ; Stuck at GND ;
+; NUM[6]    ; Input ; Info     ; Stuck at VCC ;
+; NUM[5]    ; Input ; Info     ; Stuck at GND ;
++-----------+-------+----------+--------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "SevenSeg:SS4"    ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; NUM[4..3] ; Input ; Info     ; Stuck at VCC ;
+; NUM[2..0] ; Input ; Info     ; Stuck at GND ;
+; NUM[7]    ; Input ; Info     ; Stuck at GND ;
+; NUM[6]    ; Input ; Info     ; Stuck at VCC ;
+; NUM[5]    ; Input ; Info     ; Stuck at GND ;
++-----------+-------+----------+--------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "SevenSeg:SS3"    ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; NUM[4..3] ; Input ; Info     ; Stuck at VCC ;
+; NUM[2..0] ; Input ; Info     ; Stuck at GND ;
+; NUM[7]    ; Input ; Info     ; Stuck at GND ;
+; NUM[6]    ; Input ; Info     ; Stuck at VCC ;
+; NUM[5]    ; Input ; Info     ; Stuck at GND ;
++-----------+-------+----------+--------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "SevenSeg:SS2"    ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; NUM[4..3] ; Input ; Info     ; Stuck at VCC ;
+; NUM[2..0] ; Input ; Info     ; Stuck at GND ;
+; NUM[7]    ; Input ; Info     ; Stuck at GND ;
+; NUM[6]    ; Input ; Info     ; Stuck at VCC ;
+; NUM[5]    ; Input ; Info     ; Stuck at GND ;
++-----------+-------+----------+--------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "SevenSeg:SS1"    ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; NUM[4..3] ; Input ; Info     ; Stuck at VCC ;
+; NUM[2..0] ; Input ; Info     ; Stuck at GND ;
+; NUM[7]    ; Input ; Info     ; Stuck at GND ;
+; NUM[6]    ; Input ; Info     ; Stuck at VCC ;
+; NUM[5]    ; Input ; Info     ; Stuck at GND ;
++-----------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 71                          ;
+; cycloneiii_ff         ; 45                          ;
+;     CLR               ; 32                          ;
+;     plain             ; 13                          ;
+; cycloneiii_lcell_comb ; 74                          ;
+;     arith             ; 27                          ;
+;         2 data inputs ; 27                          ;
+;     normal            ; 47                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 24                          ;
+; cycloneiii_ram_block  ; 3                           ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.67                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Wed Dec 11 17:50:21 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/documents/github/ecen-2350-dgitial-logic-lab-3/source/output_mux.v
+    Info (12023): Found entity 1: output_mux File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/output_mux.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/documents/github/ecen-2350-dgitial-logic-lab-3/source/memory.v
+    Info (12023): Found entity 1: memory File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/memory.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/documents/github/ecen-2350-dgitial-logic-lab-3/source/state_machine.v
+    Info (12023): Found entity 1: state_machine File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/state_machine.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/documents/github/ecen-2350-dgitial-logic-lab-3/source/sevenseg.v
+    Info (12023): Found entity 1: SevenSeg File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/documents/github/ecen-2350-dgitial-logic-lab-3/source/ol.v
+    Info (12023): Found entity 1: OL File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/OL.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/documents/github/ecen-2350-dgitial-logic-lab-3/source/nsl.v
+    Info (12023): Found entity 1: NSL File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/NSL.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/documents/github/ecen-2350-dgitial-logic-lab-3/source/lab3.v
+    Info (12023): Found entity 1: Lab3 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/documents/github/ecen-2350-dgitial-logic-lab-3/source/csl.v
+    Info (12023): Found entity 1: CSL File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/CSL.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/documents/github/ecen-2350-dgitial-logic-lab-3/source/clock_divider.v
+    Info (12023): Found entity 1: clock_divider File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/clock_divider.v Line: 1
+Info (12127): Elaborating entity "Lab3" for the top level hierarchy
+Info (12128): Elaborating entity "SevenSeg" for hierarchy "SevenSeg:SS1" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 30
+Warning (10270): Verilog HDL Case Statement warning at SevenSeg.v(18): incomplete case statement has no default case item File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 18
+Warning (10240): Verilog HDL Always Construct warning at SevenSeg.v(16): inferring latch(es) for variable "value", which holds its previous value in one or more paths through the always construct File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
+Info (10041): Inferred latch for "value[0]" at SevenSeg.v(16) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
+Info (10041): Inferred latch for "value[1]" at SevenSeg.v(16) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
+Info (10041): Inferred latch for "value[2]" at SevenSeg.v(16) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
+Info (10041): Inferred latch for "value[3]" at SevenSeg.v(16) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
+Info (10041): Inferred latch for "value[4]" at SevenSeg.v(16) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
+Info (10041): Inferred latch for "value[5]" at SevenSeg.v(16) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
+Info (10041): Inferred latch for "value[6]" at SevenSeg.v(16) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
+Info (10041): Inferred latch for "value[7]" at SevenSeg.v(16) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:CD0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 62
+Warning (10230): Verilog HDL assignment warning at clock_divider.v(27): truncated value with size 32 to match size of target (24) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/clock_divider.v Line: 27
+Info (12128): Elaborating entity "CSL" for hierarchy "CSL:CSL0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 66
+Info (12128): Elaborating entity "NSL" for hierarchy "NSL:NSL0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 68
+Warning (10235): Verilog HDL Always Construct warning at NSL.v(19): variable "SW" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/NSL.v Line: 19
+Warning (10235): Verilog HDL Always Construct warning at NSL.v(23): variable "SW" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/NSL.v Line: 23
+Warning (10235): Verilog HDL Always Construct warning at NSL.v(25): variable "turn_sig_latch" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/NSL.v Line: 25
+Info (12128): Elaborating entity "state_machine" for hierarchy "state_machine:SM0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 70
+Warning (10230): Verilog HDL assignment warning at state_machine.v(24): truncated value with size 32 to match size of target (2) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/state_machine.v Line: 24
+Warning (10230): Verilog HDL assignment warning at state_machine.v(30): truncated value with size 32 to match size of target (5) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/state_machine.v Line: 30
+Info (12128): Elaborating entity "memory" for hierarchy "state_machine:SM0|memory:M0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/state_machine.v Line: 34
+Info (12128): Elaborating entity "altsyncram" for hierarchy "state_machine:SM0|memory:M0|altsyncram:altsyncram_component" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/memory.v Line: 81
+Info (12130): Elaborated megafunction instantiation "state_machine:SM0|memory:M0|altsyncram:altsyncram_component" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/memory.v Line: 81
+Info (12133): Instantiated megafunction "state_machine:SM0|memory:M0|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/memory.v Line: 81
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "../Source/memory.mif"
+    Info (12134): Parameter "intended_device_family" = "MAX 10"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "ram_block_type" = "M9K"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_n9b1.tdf
+    Info (12023): Found entity 1: altsyncram_n9b1 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Quartus/db/altsyncram_n9b1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_n9b1" for hierarchy "state_machine:SM0|memory:M0|altsyncram:altsyncram_component|altsyncram_n9b1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "output_mux" for hierarchy "output_mux:OM0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 72
+Info (12128): Elaborating entity "OL" for hierarchy "OL:OL0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 74
+Warning (10230): Verilog HDL assignment warning at OL.v(49): truncated value with size 32 to match size of target (2) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/OL.v Line: 49
+Warning (14026): LATCH primitive "OL:OL0|SevenSeg:SS0|value[1]" is permanently enabled File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "OL:OL0|SevenSeg:SS0|value[2]" is permanently enabled File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "OL:OL0|SevenSeg:SS0|value[3]" is permanently enabled File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "OL:OL0|SevenSeg:SS0|value[4]" is permanently enabled File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "OL:OL0|SevenSeg:SS0|value[5]" is permanently enabled File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "OL:OL0|SevenSeg:SS0|value[6]" is permanently enabled File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
+Warning (14026): LATCH primitive "OL:OL0|SevenSeg:SS0|value[0]" is permanently enabled File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/SevenSeg.v Line: 16
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "state_machine:SM0|memory:M0|altsyncram:altsyncram_component|altsyncram_n9b1:auto_generated|q_a[3]" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Quartus/db/altsyncram_n9b1.tdf Line: 100
+        Warning (14320): Synthesized away node "state_machine:SM0|memory:M0|altsyncram:altsyncram_component|altsyncram_n9b1:auto_generated|q_a[4]" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Quartus/db/altsyncram_n9b1.tdf Line: 122
+        Warning (14320): Synthesized away node "state_machine:SM0|memory:M0|altsyncram:altsyncram_component|altsyncram_n9b1:auto_generated|q_a[5]" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Quartus/db/altsyncram_n9b1.tdf Line: 144
+        Warning (14320): Synthesized away node "state_machine:SM0|memory:M0|altsyncram:altsyncram_component|altsyncram_n9b1:auto_generated|q_a[6]" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Quartus/db/altsyncram_n9b1.tdf Line: 166
+        Warning (14320): Synthesized away node "state_machine:SM0|memory:M0|altsyncram:altsyncram_component|altsyncram_n9b1:auto_generated|q_a[7]" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Quartus/db/altsyncram_n9b1.tdf Line: 188
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 11
+    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 11
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 12
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 12
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 12
+    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 12
+    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 12
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 12
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 12
+    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 12
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 13
+    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 13
+    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 13
+    Warning (13410): Pin "HEX2[3]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 13
+    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 13
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 13
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 13
+    Warning (13410): Pin "HEX2[7]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 13
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 14
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 14
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 14
+    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 14
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 14
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 14
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 14
+    Warning (13410): Pin "HEX3[7]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 14
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 15
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 15
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 15
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 15
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 15
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 15
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 15
+    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 15
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 16
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 16
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 16
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 16
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 16
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 16
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 16
+    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 16
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 22
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 22
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 22
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 22
+Info (286030): Timing-Driven Synthesis is running
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "state_machine:SM0|memory:M0|altsyncram:altsyncram_component|altsyncram_n9b1:auto_generated|ALTSYNCRAM" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Quartus/db/altsyncram_n9b1.tdf Line: 31
+Info (144001): Generated suppressed messages file C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Quartus/Lab3.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 7 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 26
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 26
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 26
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 26
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 26
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 26
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Source/Lab3.v Line: 26
+Info (21057): Implemented 145 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 58 output pins
+    Info (21061): Implemented 71 logic cells
+    Info (21064): Implemented 3 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 79 warnings
+    Info: Peak virtual memory: 4813 megabytes
+    Info: Processing ended: Wed Dec 11 17:50:30 2019
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:20
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/adamp/Documents/GitHub/ECEN-2350-Dgitial-Logic-Lab-3/Quartus/Lab3.map.smsg.
+
+
